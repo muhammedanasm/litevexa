@@ -13,6 +13,11 @@ import {
   Play,
   Users,
   Code,
+  Smartphone,
+  Search,
+  Palette,
+  Megaphone,
+  Phone,
   Sparkles,
 } from "lucide-react";
 
@@ -105,9 +110,12 @@ const Navbar = () => {
         </a>
       </div>
       <Magnetic>
-        <button className="hidden md:flex items-center gap-2 px-6 py-2 border border-white rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
+        <a
+          href="tel:9645016304"
+          className="hidden md:flex items-center gap-2 px-6 py-2 border border-white rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
+        >
           Get in Touch
-        </button>
+        </a>
       </Magnetic>
     </nav>
   );
@@ -487,6 +495,7 @@ const TextReveal = () => {
 
   return (
     <section
+      id="about"
       ref={container}
       className="py-40 px-6 md:px-24 bg-[#0a0a0a] text-white"
     >
@@ -501,12 +510,77 @@ const TextReveal = () => {
   );
 };
 
+// const StickyServices = () => {
+//   const container = useRef(null);
+//   const rightSection = useRef(null);
+
+//   return (
+//     <section
+//       ref={container}
+//       className="py-20 px-6 md:px-20 flex flex-col md:flex-row gap-20 bg-[#0a0a0a] text-white"
+//     >
+//       <div className="md:w-1/3">
+//         <div className="sticky top-32">
+//           <h2 className="font-display text-6xl uppercase mb-8">Services</h2>
+//           <p className="text-gray-400 text-lg">
+//             A complete suite of digital solutions designed for the modern era.
+//           </p>
+//         </div>
+//       </div>
+//       <div ref={rightSection} className="md:w-2/3 flex flex-col gap-8">
+//         {[
+//           {
+//             icon: Globe,
+//             title: "Web Engineering",
+//             desc: "Robust, scalable platforms built with Next.js, React, and Node.",
+//           },
+//           {
+//             icon: Box,
+//             title: "3D Experiences",
+//             desc: "Immersive WebGL and Three.js interactions.",
+//           },
+//           {
+//             icon: Layers,
+//             title: "Product Design",
+//             desc: "Award-winning UI/UX design systems.",
+//           },
+//           {
+//             icon: Zap,
+//             title: "Growth Marketing",
+//             desc: "Data-driven strategies to acquire and retain users.",
+//           },
+//           {
+//             icon: Hexagon,
+//             title: "Blockchain",
+//             desc: "Smart contracts and Web3 integration.",
+//           },
+//         ].map((s, i) => (
+//           <div
+//             key={i}
+//             className="bg-zinc-900 p-12 rounded-3xl hover:bg-white hover:text-black transition-colors duration-500 group cursor-pointer border border-white/5"
+//           >
+//             <s.icon
+//               size={48}
+//               className="mb-8 text-gray-500 group-hover:text-black"
+//             />
+//             <h3 className="font-display text-4xl font-bold mb-4">{s.title}</h3>
+//             <p className="text-gray-500 group-hover:text-black/70 text-lg">
+//               {s.desc}
+//             </p>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
+
 const StickyServices = () => {
   const container = useRef(null);
   const rightSection = useRef(null);
 
   return (
     <section
+      id="services"
       ref={container}
       className="py-20 px-6 md:px-20 flex flex-col md:flex-row gap-20 bg-[#0a0a0a] text-white"
     >
@@ -521,29 +595,29 @@ const StickyServices = () => {
       <div ref={rightSection} className="md:w-2/3 flex flex-col gap-8">
         {[
           {
-            icon: Globe,
-            title: "Web Engineering",
-            desc: "Robust, scalable platforms built with Next.js, React, and Node.",
+            icon: Code,
+            title: "WEB DESIGN & DEVELOPEMENT",
+            desc: "Crafting visually stunning and high-performing websites tailored to your business goals.",
           },
           {
-            icon: Box,
-            title: "3D Experiences",
-            desc: "Immersive WebGL and Three.js interactions.",
+            icon: Smartphone,
+            title: "App development",
+            desc: "Building intuitive, scalable mobile applications for iOS and Android platforms.",
           },
           {
-            icon: Layers,
-            title: "Product Design",
-            desc: "Award-winning UI/UX design systems.",
+            icon: Search,
+            title: "SEARCH ENGINE OPTIMISATION",
+            desc: "Boosting your online visibility and driving organic traffic through data-driven search strategies.",
           },
           {
-            icon: Zap,
-            title: "Growth Marketing",
-            desc: "Data-driven strategies to acquire and retain users.",
+            icon: Palette,
+            title: "BRANDING & DESIGNING",
+            desc: "Creating unique brand identities and compelling visual designs that resonate with your audience.",
           },
           {
-            icon: Hexagon,
-            title: "Blockchain",
-            desc: "Smart contracts and Web3 integration.",
+            icon: Megaphone,
+            title: "DIGITAL MARKETING",
+            desc: "Executing strategic online campaigns to expand your reach and maximize conversions.",
           },
         ].map((s, i) => (
           <div
@@ -554,7 +628,9 @@ const StickyServices = () => {
               size={48}
               className="mb-8 text-gray-500 group-hover:text-black"
             />
-            <h3 className="font-display text-4xl font-bold mb-4">{s.title}</h3>
+            <h3 className="font-display text-3xl font-bold mb-4 uppercase">
+              {s.title}
+            </h3>
             <p className="text-gray-500 group-hover:text-black/70 text-lg">
               {s.desc}
             </p>
@@ -647,6 +723,7 @@ const ParallaxWork = () => {
 
   return (
     <section
+      id="work"
       ref={container}
       className="py-32 px-6 md:px-20 bg-[#0a0a0a] text-white min-h-screen overflow-hidden"
     >
@@ -689,7 +766,7 @@ const ParallaxWork = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black pt-32 pb-10 px-6">
+    <footer id="contact" className="bg-white text-black pt-32 pb-10 px-6">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
           <p className="text-sm font-bold uppercase tracking-widest mb-4">
@@ -698,6 +775,16 @@ const Footer = () => {
           <h2 className="font-display text-[12vw] leading-none uppercase font-bold hover:text-indigo-600 transition-colors duration-500 cursor-pointer">
             Let's Talk
           </h2>
+          <div className="mt-8">
+            <Magnetic>
+              <a
+                href="tel:9645016304"
+                className="flex items-center gap-3 px-10 py-4 bg-black text-white rounded-full uppercase text-sm font-bold tracking-widest hover:bg-indigo-600 transition-colors"
+              >
+                <Phone size={18} /> Call Now
+              </a>
+            </Magnetic>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-4 gap-12 mt-20 border-t border-black/10 pt-12">
