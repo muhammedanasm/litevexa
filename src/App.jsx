@@ -112,7 +112,7 @@ const Navbar = () => {
       </div>
       <Magnetic>
         <a
-          href="tel:999 888 7777"
+          href="tel:+91 9946469184"
           className="hidden md:flex items-center gap-2 px-6 py-2 border border-white rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
         >
           Get in Touch
@@ -725,7 +725,7 @@ const Footer = () => {
           <div className="mt-8">
             <Magnetic>
               <a
-                href="tel:999 888 7777"
+                href="tel:+91 9946469184"
                 className="flex items-center gap-3 px-10 py-4 bg-black text-white rounded-full uppercase text-sm font-bold tracking-widest hover:bg-indigo-600 transition-colors"
               >
                 <Phone size={18} /> Call Now
@@ -771,8 +771,8 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>hello@litevexa.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>litevexadigital@gmail.com</li>
+              <li>+91 9946469184</li>
             </ul>
           </div>
         </div>
