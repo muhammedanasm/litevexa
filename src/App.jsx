@@ -20,6 +20,7 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
+import logo from "./assets/Litevexa.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +94,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full px-10 py-8 flex justify-between items-center z-50 mix-blend-difference text-white">
       <div className="font-display font-bold text-3xl uppercase tracking-tighter">
-        Logo.
+        <img style={{ height: "25px" }} src={logo} alt="Logo" />
       </div>
       <div className="hidden md:flex gap-12 font-sans text-xs font-bold uppercase tracking-widest">
         <a href="#about" className="hover:text-gray-400 transition-colors">
@@ -111,7 +112,7 @@ const Navbar = () => {
       </div>
       <Magnetic>
         <a
-          href="tel:9645016304"
+          href="tel:999 888 7777"
           className="hidden md:flex items-center gap-2 px-6 py-2 border border-white rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
         >
           Get in Touch
@@ -276,7 +277,7 @@ const Hero = () => {
       {/* Hero Footer */}
       <div className="absolute bottom-12 left-6 md:left-20 flex justify-between items-end w-[90%] border-t border-white/10 pt-6">
         <p className="max-w-md text-sm text-gray-400 font-sans leading-relaxed">
-          Logo is a global digital agency. We merge raw creativity with
+          Litevexa is a global digital agency. We merge raw creativity with
           engineering precision to build the unbuildable.
         </p>
         <div className="flex flex-col items-center gap-2">
@@ -289,60 +290,6 @@ const Hero = () => {
     </section>
   );
 };
-
-// const VideoExpand = () => {
-//   const container = useRef(null);
-//   const video = useRef(null);
-
-//   useLayoutEffect(() => {
-//     const ctx = gsap.context(() => {
-//       gsap.to(video.current, {
-//         width: "100%",
-//         height: "100vh",
-//         borderRadius: "0px",
-//         scrollTrigger: {
-//           trigger: container.current,
-//           start: "top center",
-//           end: "bottom bottom",
-//           scrub: true,
-//         },
-//       });
-//     }, container);
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <section
-//       ref={container}
-//       className="h-[150vh] flex items-start justify-center pt-20 bg-[#0a0a0a]"
-//     >
-//       <div
-//         ref={video}
-//         className="w-[80vw] h-[60vh] bg-gray-800 rounded-[50px] overflow-hidden relative"
-//       >
-//         <video
-//           autoPlay
-//           loop
-//           muted
-//           playsInline
-//           className="w-full h-full object-cover opacity-80"
-//         >
-//           <source
-//             src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-lines-connecting-2964-large.mp4"
-//             type="video/mp4"
-//           />
-//         </video>
-//         <div className="absolute inset-0 flex items-center justify-center">
-//           <Magnetic>
-//             <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-//               <Play fill="white" size={32} />
-//             </div>
-//           </Magnetic>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
 
 const VideoExpand = () => {
   const container = useRef(null);
@@ -778,7 +725,7 @@ const Footer = () => {
           <div className="mt-8">
             <Magnetic>
               <a
-                href="tel:9645016304"
+                href="tel:999 888 7777"
                 className="flex items-center gap-3 px-10 py-4 bg-black text-white rounded-full uppercase text-sm font-bold tracking-widest hover:bg-indigo-600 transition-colors"
               >
                 <Phone size={18} /> Call Now
@@ -789,7 +736,11 @@ const Footer = () => {
 
         <div className="grid md:grid-cols-4 gap-12 mt-20 border-t border-black/10 pt-12">
           <div>
-            <h4 className="font-bold text-xl mb-4">Logo</h4>
+            <img
+              style={{ maxWidth: "200px", marginBottom: "20px" }}
+              src={logo}
+              alt="Logo"
+            />
             <p className="text-gray-500 text-sm">
               Building the future of digital interaction.
             </p>
@@ -820,7 +771,7 @@ const Footer = () => {
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>hello@logo.com</li>
+              <li>hello@litevexa.com</li>
               <li>+1 (555) 123-4567</li>
             </ul>
           </div>
