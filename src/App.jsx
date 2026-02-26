@@ -20,7 +20,12 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
-import logo from "./assets/Litevexa.svg";
+import logo from "./assets/Litevexa Logo-White.svg";
+import logofooter from "./assets/Litevexa.svg";
+import works from "./assets/corevista.png";
+import works1 from "./assets/swadiamonds.png";
+import works2 from "./assets/welota.png";
+import works3 from "./assets/b2nes.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,7 +117,7 @@ const Navbar = () => {
       </div>
       <Magnetic>
         <a
-          href="tel:+91 9946469184"
+          href="tel:+91 9645016304"
           className="hidden md:flex items-center gap-2 px-6 py-2 border border-white rounded-full uppercase text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-colors"
         >
           Get in Touch
@@ -666,7 +671,7 @@ const ParallaxWork = () => {
   }, []);
 
   const imgClass =
-    "w-full h-[60vh] object-cover rounded-lg mb-8 opacity-60 hover:opacity-100 transition-opacity duration-500 grayscale hover:grayscale-0";
+    "w-full h-[60vh] object-cover rounded-lg mb-8 opacity-60 hover:opacity-100 transition-opacity duration-500 hover:grayscale-0";
 
   return (
     <section
@@ -679,32 +684,14 @@ const ParallaxWork = () => {
       </h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div ref={col1} className="mt-20">
-          <img
-            src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2400"
-            className={imgClass}
-          />
-          <img
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664"
-            className={imgClass}
-          />
-          <img
-            src="https://images.unsplash.com/photo-1558655146-d09347e0b7a9?q=80&w=2070"
-            className={imgClass}
-          />
+          <img src={works} className={imgClass} />
+          <img src={works1} className={imgClass} />
+          <img src={works2} className={imgClass} />
         </div>
         <div ref={col2} className="-mt-20">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069"
-            className={imgClass}
-          />
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070"
-            className={imgClass}
-          />
-          <img
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2128"
-            className={imgClass}
-          />
+          <img src={works3} className={imgClass} />
+          <img src={works} className={imgClass} />
+          <img src={works1} className={imgClass} />
         </div>
       </div>
     </section>
@@ -725,7 +712,7 @@ const Footer = () => {
           <div className="mt-8">
             <Magnetic>
               <a
-                href="tel:+91 9946469184"
+                href="tel:+91 9645016304"
                 className="flex items-center gap-3 px-10 py-4 bg-black text-white rounded-full uppercase text-sm font-bold tracking-widest hover:bg-indigo-600 transition-colors"
               >
                 <Phone size={18} /> Call Now
@@ -738,7 +725,7 @@ const Footer = () => {
           <div>
             <img
               style={{ maxWidth: "200px", marginBottom: "20px" }}
-              src={logo}
+              src={logofooter}
               alt="Logo"
             />
             <p className="text-gray-500 text-sm">
@@ -772,7 +759,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-sm text-gray-500">
               <li>litevexadigital@gmail.com</li>
-              <li>+91 9946469184</li>
+              <li>+91 9645016304</li>
             </ul>
           </div>
         </div>
